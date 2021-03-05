@@ -568,6 +568,15 @@ export interface Action <T extends ActionResponse> {
   hideActionHeader?: boolean;
 
   /**
+   * Indicates if Action Header back button should be hidden.
+   * Action header consist of:
+   * - breadcrumbs
+   * - action buttons
+   * - action title
+   */
+  hideActionBackButton?: boolean;
+
+  /**
    * The max width of action HTML container.
    * You can put here an actual size in px or an array of widths, where different values
    * will be responsible for different breakpoints.

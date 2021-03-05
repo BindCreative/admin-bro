@@ -45,6 +45,10 @@ export interface ActionJSON {
    */
   hideActionHeader: boolean;
   /**
+   * Whether to hide action header back button
+   */
+  hideActionBackButton: boolean;
+  /**
    * containerWidth passed from the action setup.
    */
   containerWidth: string | number | Array<string | number>;

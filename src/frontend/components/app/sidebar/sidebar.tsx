@@ -8,7 +8,6 @@ import { ResourceJSON, PageJSON } from 'src/frontend/interfaces'
 import SidebarBranding from './sidebar-branding'
 import SidebarPages from './sidebar-pages'
 import { ReduxState } from '../../../store/store'
-import SidebarFooter from './sidebar-footer'
 
 import SidebarResourceSection from './sidebar-resource-section'
 
@@ -58,7 +57,6 @@ const Sidebar: React.FC<Props> = (props) => {
         <SidebarResourceSection resources={resources} />
       </Box>
       <SidebarPages pages={pages} />
-      {branding?.softwareBrothers && <SidebarFooter />}
     </StyledSidebar>
   )
 }

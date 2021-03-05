@@ -346,6 +346,7 @@ class ActionDecorator {
       component: this.action.component,
       showInDrawer: !!this.action.showInDrawer,
       hideActionHeader: !!this.action.hideActionHeader,
+      hideActionBackButton: !!this.action.hideActionBackButton,
       containerWidth: this.containerWidth(),
       layout: this.layout(currentAdmin),
       variant: this.variant(),

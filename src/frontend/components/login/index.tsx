@@ -13,7 +13,6 @@ import {
   Button,
   Text,
   MessageBox,
-  SoftwareBrothers,
   themeGet,
 } from '@admin-bro/design-system'
 import { useTranslation } from '../../hooks'

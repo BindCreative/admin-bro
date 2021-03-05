@@ -81,7 +81,6 @@ export const ActionHeader: React.FC<ActionHeaderProps> = (props) => {
   const cssHeaderMT = action.showInDrawer ? '' : 'lg'
   const cssActionsMB = action.showInDrawer ? 'xl' : 'default'
   const CssHComponent = action.showInDrawer ? H3 : H2
-
   return (
     <Box className={cssClass('ActionHeader')}>
       {action.showInDrawer ? '' : (
@@ -95,7 +94,7 @@ export const ActionHeader: React.FC<ActionHeaderProps> = (props) => {
       <Box display={['block', cssIsRootFlex ? 'flex' : 'block']}>
         <Box mt={cssHeaderMT} flexGrow={1} px={['default', 0]}>
           <CssHComponent mb="lg">
-            {!isList && listAction ? (
+            {!isList && listAction && !action.hideActionBackButton ? (
               <StyledBackButton resourceId={resourceId} showInDrawer={action.showInDrawer} />
             ) : ''}
             {title}
