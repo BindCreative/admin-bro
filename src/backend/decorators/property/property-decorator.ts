@@ -118,12 +118,57 @@ class PropertyDecorator {
   }
 
   /**
+   *
+   * @param name name of property
+   * @param resourceId resource id
+   */
+  myTranslator(name: string, resourceId: string): string {
+    switch (name) {
+      case "createdAt":
+        return "Created at"
+      case "updatedAt":
+        return "Updated at"
+      case "site.merchant":
+        return "Merchant"
+      case "meta.product.name":
+        return "Product name"
+      case "meta.product.brand":
+        return "Brand"
+      case "meta.product.category":
+        return "Category"
+      case "meta.product.sku":
+        return "SKU"
+      case "meta.product.url":
+        return "Product URL"
+      case "meta.factory.name":
+        return "Factory name"
+      case "meta.factory.url":
+        return "Factory URL"
+      case "apiKeyAdmin":
+        return "API key for editor (admin)"
+      case "apiKeyEditor":
+        return "API key for editor"
+      case "pages.name":
+        return "Page name"
+      case "pages.id":
+        return "Page ID"
+      case "pages.svg":
+        return "clipping area as SVG"
+      case "pages.png":
+        return "clipping area as PNG"
+      case "attributes.colors":
+        return "Colors"
+      default:
+        return this._admin.translateAction(name, resourceId)
+    }
+  }
+  /**
    * Label of a property
    *
    * @return  {string}
    */
   label(): string {
-    return this._admin.translateProperty(this.propertyPath, this._resource.id())
+    return this.myTranslator(this.propertyPath, this._resource.id())
   }
 
   /**
